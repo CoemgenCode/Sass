@@ -1,0 +1,85 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+body {
+  background: #000;
+}
+
+p {
+  margin: 1rem;
+}
+
+.table {
+  width: 100%;
+  color: #FFF;
+}
+.table td {
+  border: solid #ccc;
+}
+.table thead {
+  background: black;
+  color: #FFF;
+}
+@media only screen and (max-width: 1200px) {
+  .table {
+    width: 90%;
+  }
+}
+
+.btn, .card-cancel, .card-action {
+  background: 247;
+}
+.btn:hover, .card-cancel:hover, .card-action:hover {
+  background: 240;
+}
+
+@media (max-width: 1200px) {
+  body {
+    width: 90%;
+  }
+}
+.card-actions {
+  display: flex;
+}/*# sourceMappingURL=style.css.map */

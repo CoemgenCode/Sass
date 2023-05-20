@@ -1,0 +1,61 @@
+@import "libs/reset.scss";
+@import "libs/responsives.scss";
+
+
+body{
+    background: #000;
+}
+
+p{
+    margin: 1rem;
+}
+
+
+
+.table{
+    width: 100%;
+    
+    td{
+        border: solid #ccc;
+    }
+
+    thead{
+        background: black;
+        color: #FFF;
+    }
+    color: #FFF;
+
+    @media only screen and (max-width: 1200px) {
+        width: 90%;
+    }
+
+}
+
+.btn {
+    background: blue($color: #2424f7);
+
+    &:hover {
+        background: blue($color: #7b7ff0);
+    }
+}
+
+@media (max-width: 1200px) {
+    body{
+        width: 90%;
+    }
+    
+}
+
+
+.card-action {
+    @extend .btn;
+}
+
+.card-cancel {
+    @extend .btn;
+}
+
+.card-actions {
+    display: flex;
+}
+
