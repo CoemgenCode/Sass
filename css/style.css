@@ -44,7 +44,9 @@ td, th {
 }
 
 body {
-  background: #000;
+  padding: 20px;
+  background: #fff;
+  font-family: sans-serif;
 }
 
 p {
@@ -53,13 +55,13 @@ p {
 
 .table {
   width: 100%;
-  color: #FFF;
 }
 .table td {
   border: solid #ccc;
 }
 .table thead {
-  background: black;
+  background-color: #000;
+  background-repeat: no-repeat;
   color: #FFF;
 }
 @media only screen and (max-width: 1200px) {
@@ -68,18 +70,36 @@ p {
   }
 }
 
-.btn, .card-cancel, .card-action {
-  background: 247;
-}
-.btn:hover, .card-cancel:hover, .card-action:hover {
-  background: 240;
+.btn, .card-action, .btn-danger, .card-cancel {
+  padding: 5px 12px;
+  border-radius: 3px;
 }
 
-@media (max-width: 1200px) {
-  body {
-    width: 90%;
-  }
+.btn, .card-action, .btn-danger, .card-cancel {
+  text-decoration: none;
+  background: #68b3ff;
+  color: #FFF;
 }
+.btn:hover, .card-action:hover, .btn-danger:hover, .card-cancel:hover {
+  background: #38628c;
+}
+
+.btn-danger, .card-cancel {
+  background: #f74e4e;
+}
+.btn-danger:hover, .card-cancel:hover {
+  background: #b23e3e;
+}
+
+.card-cancel, .card {
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+  padding: 10px;
+  border-radius: 3px;
+}
+
 .card-actions {
   display: flex;
 }/*# sourceMappingURL=style.css.map */
