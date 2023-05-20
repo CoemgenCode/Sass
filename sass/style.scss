@@ -20,13 +20,16 @@ p{
     }
 
     thead{
-        background: black;
-        color: #FFF;
+        background: { 
+        color: #000;
+        repeat: no-repeat;
     }
     color: #FFF;
 
     @media only screen and (max-width: 1200px) {
         width: 90%;
+    }
+
     }
 
 }
@@ -37,25 +40,19 @@ p{
     &:hover {
         background: blue($color: #7b7ff0);
     }
-}
 
-@media (max-width: 1200px) {
-    body{
-        width: 90%;
+    .theme-vert & {
+        background: green;
     }
-    
+
+    @media (max-width: 1200px) {
+            padding: 10px;;
+        
+    }
+
 }
 
 
-.card-action {
-    @extend .btn;
-}
 
-.card-cancel {
-    @extend .btn;
-}
 
-.card-actions {
-    display: flex;
-}
 
