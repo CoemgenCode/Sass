@@ -111,6 +111,37 @@ p{
     display: flex;
 }
 
+@for $i from 1 through 4 {
+    .m-#{$i}{
+        margin: 0 ($i * .25rem);
+    }
+}
+
+$animals: bear, lion, camel;
+
+@each $animal in $animals {
+
+    .icon-#{$animal} {
+        background: url(img/#{$animal}.png);
+    }
+}
+
+$categories:
+chien #eb6565,
+chat #ffa528,
+poisson #1a1a27;
+
+@each $category in $categories {
+    .#{nth($category, 1)} {
+        background: nth($category, 2);
+            @if(lightness(nth($category, 2)) > 50%){
+        color: #000;
+    } @else {
+        color: #FFF;
+    }
+    }
+}
+
 @media #{$medium-up} {
     .btn {
         width: 100%;

@@ -126,6 +126,49 @@ p {
   display: flex;
 }
 
+.m-1 {
+  margin: 0 0.25rem;
+}
+
+.m-2 {
+  margin: 0 0.5rem;
+}
+
+.m-3 {
+  margin: 0 0.75rem;
+}
+
+.m-4 {
+  margin: 0 1rem;
+}
+
+.icon-bear {
+  background: url(img/bear.png);
+}
+
+.icon-lion {
+  background: url(img/lion.png);
+}
+
+.icon-camel {
+  background: url(img/camel.png);
+}
+
+.chien {
+  background: #eb6565;
+  color: #000;
+}
+
+.chat {
+  background: #ffa528;
+  color: #000;
+}
+
+.poisson {
+  background: #1a1a27;
+  color: #FFF;
+}
+
 @media only screen and (min-width: 500px) {
   .btn, .btn-danger, .card-action, .card-cancel {
     width: 100%;
