@@ -1,9 +1,13 @@
+$medium: 500px;
+
 @import "libs/reset.scss";
 @import "libs/responsives.scss";
 
+$primary: #68b3ff;
+$padding: 20;
 
 body{
-    padding: 20px;
+    padding: $padding;
     background: #fff;
     font-family: sans-serif;
 }
@@ -41,11 +45,11 @@ p{
 .btn {
     @extend %btn;
     text-decoration: none;
-    background: #68b3ff;
+    background: $primary;
     color: #FFF;
 
     &:hover {
-        background:  #38628c;
+        background:  darken($primary, 20);
     }
 }
 
@@ -83,4 +87,10 @@ p{
 
 .card-actions{
     display: flex;
+}
+
+@media #{$medium-up} {
+    .btn {
+        width: 100%;
+    }
 }

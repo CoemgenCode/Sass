@@ -44,7 +44,7 @@ td, th {
 }
 
 body {
-  padding: 20px;
+  padding: 20;
   background: #fff;
   font-family: sans-serif;
 }
@@ -81,7 +81,7 @@ p {
   color: #FFF;
 }
 .btn:hover, .card-action:hover, .btn-danger:hover, .card-cancel:hover {
-  background: #38628c;
+  background: #0280ff;
 }
 
 .btn-danger, .card-cancel {
@@ -102,4 +102,10 @@ p {
 
 .card-actions {
   display: flex;
+}
+
+@media only screen and (min-width: 500px) {
+  .btn, .btn-danger, .card-action, .card-cancel {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
