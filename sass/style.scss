@@ -6,7 +6,7 @@ $base-font-size: 14px;
 @import "libs/functions.scss";
 @import "libs/responsives.scss";
 
-$primary: #68b3ff;
+$primary: #192027;
 $padding: 20;
 
 html body {
@@ -53,7 +53,12 @@ p{
     @extend %btn;
     text-decoration: none;
     background: $primary;
-    color: #FFF;
+    @if(lightness($primary) > 50%){
+        color: #000;
+    } @else {
+        color: #FFF;
+    }
+    
 
     &:hover {
         background:  darken($primary, 20);

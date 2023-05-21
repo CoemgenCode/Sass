@@ -81,11 +81,11 @@ p {
 
 .btn, .card-action, .btn-danger, .card-cancel {
   text-decoration: none;
-  background: #68b3ff;
+  background: #192027;
   color: #FFF;
 }
 .btn:hover, .card-action:hover, .btn-danger:hover, .card-cancel:hover {
-  background: #0280ff;
+  background: black;
 }
 
 .big {
