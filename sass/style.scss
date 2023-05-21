@@ -1,16 +1,27 @@
+$medium: 500px;
+$base-font-size: 14px;
+
 @import "libs/reset.scss";
+@import "libs/mixins.scss";
+@import "libs/functions.scss";
 @import "libs/responsives.scss";
 
+$primary: #192027;
+$padding: 20;
+
+html body {
+    font-size: $base-font-size;
+}
 
 body{
-    background: #000;
+    padding: $padding;
+    background: #8a8a8a;
+    font-family: sans-serif;
 }
 
 p{
     margin: 1rem;
 }
-
-
 
 .table{
     
@@ -31,6 +42,7 @@ p{
     @media only screen and (max-width: 1200px) {
         width: 90%;
     }
+<<<<<<< HEAD
 }
 
 .btn {
@@ -48,10 +60,115 @@ p{
             padding: 10px;;
         
     }
+=======
+}
+
+%btn{
+    padding: em(5) em(12);
+    border-radius: 3px;
+}
+
+.btn {
+    @extend %btn;
+    text-decoration: none;
+    background: $primary;
+    @if(lightness($primary) > 50%){
+        color: #000;
+    } @else {
+        color: #FFF;
+    }
+    
+
+    &:hover {
+        background:  darken($primary, 20);
+    }
+}
+
+.big {
+    font-size: 2rem;
+    text-transform: uppercase; 
+}
+
+.btn-danger {
+    @extend .btn;
+
+    background: #f74e4e;
+
+    &:hover {
+        background: #b23e3e;
+    }
+}
+
+%shadow{
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+.card{
+    @extend %shadow;
+    padding: 10px;
+    border-radius: 3px;
+    position:relative;
+    background: #FFF;
+    @include triangle;
+    // mixin @include rotate(40deg);
+>>>>>>> f375595f08fee2091c37a115332d5eea19328012
 
 }
 
 
+<<<<<<< HEAD
 
 
+=======
 
+.card-action{
+    @extend .btn;
+}
+
+.card-cancel{
+    @extend .btn-danger;
+    @extend %shadow;
+}
+
+.card-actions{
+    display: flex;
+}
+>>>>>>> f375595f08fee2091c37a115332d5eea19328012
+
+@for $i from 1 through 4 {
+    .m-#{$i}{
+        margin: 0 ($i * .25rem);
+    }
+}
+
+$animals: bear, lion, camel;
+
+@each $animal in $animals {
+
+    .icon-#{$animal} {
+        background: url(img/#{$animal}.png);
+    }
+}
+
+$categories:
+chien #eb6565,
+chat #ffa528,
+poisson #1a1a27;
+
+@each $category in $categories {
+    .#{nth($category, 1)} {
+        background: nth($category, 2);
+            @if(lightness(nth($category, 2)) > 50%){
+        color: #000;
+    } @else {
+        color: #FFF;
+    }
+    }
+}
+
+@media #{$medium-up} {
+    .btn {
+        width: 100%;
+    }
+}
